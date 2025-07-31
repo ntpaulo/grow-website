@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;  /* <- Libera o scroll vertical */
+    scroll-behavior: smooth; /* (opcional) para rolagem suave */
+}
+
+.fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('backgr.png');
+    background-size: auto;
+    background-position: center;
+    filter: blur(12px);
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.toppag {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 88px;
+    background-color: rgba(255, 255, 255, 0.548);
+    z-index: 1000;                  /* fica por cima de outros elementos */
+    display: flex;
+    justify-content: space-between; /* Empurra o primeiro item para a esquerda e o último para a direita */
+    align-items: center;            /* alinha verticalmente */
+}
+
+.containermenu .menu {
+    width: 30px;
+    cursor: pointer;
+    position: absolute; /* POSICIONAMENTO ABSOLUTO! Isso o tira do fluxo flex do header */
+    right: 370px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banners {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 150px;
+}
+
+.banner2 {
+    width: 100%;
+    margin-top: 50px;
+
+}
+
+@media (max-width: 768px) {
+  .banners {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .descrição1, .descrição2, .descrição3 {
+    width: 90%;
+}
+}
+
+.bannerstore {
+    max-width: 100%;                /* Garante que a imagem se ajuste à largura da div */
+    height: auto;                   /* Mantém a proporção da imagem */
+    display: block;                 /* Remove espaço extra abaixo da imagem */
+    margin: 0 auto;
+}
+
+.bannerescola {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.bannerteam {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.bannerstore,
+.bannerescola,
+.bannerteam {
+    filter: brightness(35%);
+    transition: filter 0.4s ease;
+}
+
+.bannerstore:hover,
+.bannerescola:hover,
+.bannerteam:hover {
+    filter: brightness(100%);
+}
+
+.descrição1, 
+.descrição2, 
+.descrição3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 700px;
+    width: 416px;
+    background-color: rgba(189, 189, 189, 0.658);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.texto1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    position: absolute;
+}
+
+.texto2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    position: absolute;
+}
+
+.texto3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    position: absolute;
+}
+
+.descrição1 .texto1 p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    color: #fdfdfd;
+}
+
+.descrição2 .texto2 p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    color: #fdfdfd;
+}
+
+.descrição3 .texto3 p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    color: #fdfdfd;
+}
+
+
+.toppag h1 {
+    margin: 0;
+    font-size: 2.2em;
+    text-align: center;
+    flex-grow: 1;
+}
+
+p {
+    font-size: 15pt;
+    text-align: center;
+}
