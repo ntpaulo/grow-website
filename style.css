@@ -56,19 +56,6 @@ body {
 .banner2 {
     width: 100%;
     margin-top: 50px;
-
-}
-
-@media (max-width: 768px) {
-  .banners {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .descrição1, .descrição2, .descrição3 {
-    width: 90%;
-}
 }
 
 .bannerstore {
@@ -97,6 +84,7 @@ body {
 .bannerteam {
     filter: brightness(35%);
     transition: filter 0.4s ease;
+    border-radius: 5px;
 }
 
 .bannerstore:hover,
@@ -118,9 +106,10 @@ body {
     background-color: rgba(189, 189, 189, 0.658);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     cursor: pointer;
+    border-radius: 10px;
 }
 
-.texto1 {
+.texto {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,31 +121,7 @@ body {
     position: absolute;
 }
 
-.texto2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    position: absolute;
-}
-
-.texto3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    position: absolute;
-}
-
-.descrição1 .texto1 p {
+.descrição1 .texto p {
     margin: 0;
     font-size: 20px;
     font-weight: 300;
@@ -168,7 +133,7 @@ body {
     color: #fdfdfd;
 }
 
-.descrição2 .texto2 p {
+.descrição2 .texto p {
     margin: 0;
     font-size: 20px;
     font-weight: 300;
@@ -180,7 +145,7 @@ body {
     color: #fdfdfd;
 }
 
-.descrição3 .texto3 p {
+.descrição3 .texto p {
     margin: 0;
     font-size: 20px;
     font-weight: 300;
@@ -203,4 +168,53 @@ body {
 p {
     font-size: 15pt;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .toppag {
+    flex-direction: row;       /* Mantém lado a lado */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    background-color: #fdfdfd;
+    } 
+
+    .toppag h1 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-align: left;
+    }
+
+    .containermenu .menu{
+    width: 30px;
+    cursor: pointer;
+    position: absolute; 
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+
+    .menu {
+    width: 25px;
+    height: auto;
+    }
+
+    .banners {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    }
+
+    .descrição1,
+    .descrição2,
+    .descrição3 {
+    width: 85%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+
 }
