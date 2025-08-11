@@ -186,7 +186,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
   text-align: center;
 }
 
@@ -199,7 +198,6 @@ p {
   border-radius: 16px;
 
   max-width: 300px;
-  padding: 24px;
 
 }
 .endereco iframe {
