@@ -197,6 +197,7 @@ p {
   justify-content: center;
   border-radius: 16px;
   max-width: 300px;
+  padding: 0;
 }
 .endereco iframe {
   display: block;
