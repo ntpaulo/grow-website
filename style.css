@@ -274,4 +274,9 @@ p {
   .map-cards {
     gap: 0px;
   }
+  .onda1 svg {
+  line-height: 0;
+  transform: rotate(180deg);
+  transform: scaleY(-1);
+}
 }
