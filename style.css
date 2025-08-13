@@ -167,6 +167,8 @@ p {
 
 .banner2 {
   width: 100%;
+  background-color: #2f2011;
+  line-height: 0;
 }
 
 .map-container h2 {
@@ -177,9 +179,9 @@ p {
 }
 
 .map-container {
-   text-align: center;
-   margin-top: 0;
-   padding-top: 20px;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 .map-cards {
@@ -187,6 +189,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  gap: 40px;
 }
 
 .endereco {
@@ -209,6 +212,15 @@ p {
 .endereco h3 {
   font-size: 21px;
   text-align: center;
+}
+
+.onda1 svg {
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.onda2 svg {
+  line-height: 0;
 }
 
 @media (max-width: 768px) {
@@ -256,5 +268,9 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+
+  .map-cards {
+    gap: 0px;
   }
 }
